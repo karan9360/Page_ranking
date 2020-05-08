@@ -10,7 +10,7 @@ except ImportError:
 import numpy
 from urlparse import urljoin
 import json
-import RankingCalculator as PGCalc
+import RankingCalculator as calculator
 
 urlDict = {} 
 urlKeyValue = {}
@@ -138,7 +138,7 @@ def main():
     subGraph = genSubGraph(transProbGraph, dampFact)
     print("Generated Probability Graph\n")
 
-    PGVector = PGCalc.genPageRankVector(subGraph)
+    PGVector = calculator.genPageRankVector(subGraph)
     print("Rank Vector\n")
 
     RankList = {}
